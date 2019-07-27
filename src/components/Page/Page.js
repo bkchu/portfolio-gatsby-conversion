@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Footer from '../Footer/Footer';
 import { motion } from 'framer-motion';
+import { window } from 'browser-monads';
 
 class Page extends Component {
   componentDidMount() {

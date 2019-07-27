@@ -1,10 +1,12 @@
-import React, { Component } from "react"
-import classnames from "classnames"
-import { motion } from "framer-motion"
-import { connect } from "react-redux"
-import Logo from "../../assets/BKC_Logo.svg"
-import { contactModal, setScrolled } from "../../redux/ducks/reducer"
-import NavItem from "./NavItem/NavItem"
+import { window } from "browser-monads";
+import classnames from "classnames";
+import { motion } from "framer-motion";
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import Logo from "../../assets/BKC_Logo.svg";
+import { contactModal, setScrolled } from "../../redux/ducks/reducer";
+import NavItem from "./NavItem/NavItem";
+
 
 class Navbar extends Component {
   constructor(props) {

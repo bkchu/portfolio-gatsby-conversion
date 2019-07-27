@@ -5,6 +5,7 @@ import classnames from "classnames"
 import { motion } from "framer-motion"
 import NavItem from "./NavItem/NavItem"
 import { navigate } from "gatsby"
+import { window } from 'browser-monads';
 
 const NavbarMobile = props => {
   const [open, toggleOpen] = useState(false)
@@ -23,7 +24,7 @@ const NavbarMobile = props => {
         },
       },
       closed: {
-        left: typeof window !== `undefined` && window.innerWidth,
+        left: window.innerWidth,
         transition: {
           left: { stiffness: 1000 },
         },
