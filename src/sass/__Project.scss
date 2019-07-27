@@ -1,0 +1,53 @@
+.Project {
+  color: $body-color;
+  background: $white;
+  padding: 3rem;
+  box-shadow: $black-box-shadow;
+  position: relative;
+
+  &__img-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 125px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+  }
+
+  &__title {
+    @include fonting($header-font-stack, $s: 3.5rem, $lh: 4.5rem);
+    margin-top: 15rem;
+    margin-bottom: 1.5rem;
+    color: $black;
+
+    cursor: pointer;
+  }
+
+  &__year {
+    @include fonting($header-font-stack, $s: 2rem);
+    margin: 1.5rem 0;
+  }
+
+  &__link.link {
+    @include fonting($header-font-stack, $s: 2rem, $ls: 1px, $w: 300, $lh: 2.5rem);
+    color: $black;
+  }
+
+  &__description {
+    @include fonting($header-font-stack, $s: 2rem, $w: 300, $lh: 2.5rem);
+    padding-left: 1.5rem;
+    border-left: 0.25rem solid $gray-1;
+    color: $black;
+    margin: 2rem 0;
+  }
+}

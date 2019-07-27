@@ -1,0 +1,19 @@
+.Jumbo {
+  margin-top: 20vh;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  background: $white;
+  color: $black;
+
+  &__name,
+  &__description {
+    @include fonting($header-font-stack, $s: 5rem, $w: 700, $lh: 6rem);
+
+    @include breakpoint(tablet) {
+      @include fonting($header-font-stack, $s: 9rem, $w: 700, $lh: 11rem);
+    }
+
+    max-width: 85%;
+  }
+}

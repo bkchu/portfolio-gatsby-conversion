@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Brandon Chung - UI Developer`,
+    description: `Brandon Chung - UI Developer currently curating experiences that are pleasing and accessible at projekt202.`,
+    author: `Brandon Chung`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,16 +15,23 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Brandon Chung - UI Developer`,
+        short_name: `Brandon Chung - UI Developer`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        background_color: `#FFFFFF`,
+        theme_color: `#000000`,
+        display: `standalone`,
+        icon: `src/assets/bkchuLogo.svg`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-85177244-2",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

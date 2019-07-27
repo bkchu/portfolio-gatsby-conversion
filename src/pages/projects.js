@@ -3,12 +3,12 @@ import React from "react"
 
 import SEO from "../components/seo"
 import Main from "../components/Main/Main"
-import Jumbo from "../components/Jumbo/Jumbo"
+import Projects from "../components/Projects/Projects"
 
 const IndexPage = () => (
   <Main>
-    <SEO title="Home" />
-    <Jumbo />
+    <SEO title="Projects" />
+    <Projects />
   </Main>
 )
 

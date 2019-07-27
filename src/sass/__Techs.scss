@@ -1,0 +1,13 @@
+.Techs {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__tech {
+    @include fonting($header-font-stack, $s: 2rem, $w: 300);
+
+    font-style: italic;
+    margin: .25rem;
+    transition: all 200ms;
+    color: $black;
+  }
+}

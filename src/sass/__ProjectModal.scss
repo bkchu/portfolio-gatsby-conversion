@@ -1,0 +1,69 @@
+.ProjectModal {
+  color: $body-color;
+  background: $white;
+  padding: 20px;
+  position: relative;
+  border-radius: 20px;
+
+  &__img-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 125px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+  }
+
+  &__title {
+    margin-top: 15rem;
+    margin-bottom: 1.5rem;
+    color: $black;
+    @include fonting($header-font-stack, $s: 3rem);
+  }
+
+  &__year {
+    @include fonting($header-font-stack, $s: 2rem);
+    margin: 1.5rem 0;
+  }
+
+  &__link.link {
+    color: $black;
+    @include fonting($header-font-stack, $s: 2rem, $ls: 1px, $w: 300);
+  }
+
+  &__description {
+    @include fonting($header-font-stack, $s: 2rem, $w: 300, $lh: 2.5rem);
+    padding-left: 1.5rem;
+    border-left: 0.25rem solid $gray-1;
+    color: $black;
+    margin: 2rem 0;
+  }
+  .Credential {
+    margin: 1.5rem 0;
+
+    &__header {
+      @include fonting($header-font-stack, $w: 800, $s: 2rem, $lh: 3rem);
+    }
+
+    &__role {
+      @include fonting($header-font-stack, $w: 800, $s: 2rem, $lh: 3rem);
+    }
+
+    &__email {
+      @include fonting($header-font-stack, $s: 1.5rem, $lh: 2.25rem);
+    }
+
+    &__password {
+      @include fonting($header-font-stack, $s: 1.5rem, $lh: 2.25rem);
+    }
+  }
+}

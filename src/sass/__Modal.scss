@@ -1,0 +1,55 @@
+.Modal {
+  position: fixed;
+  z-index: 400;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(89, 89, 89, 0.844);
+
+  &__content {
+    position: relative;
+    max-height: 90%;
+    overflow-y: scroll;
+    box-shadow: $black-box-shadow;
+    background-color: $white;
+    border-radius: 3px;
+    background-clip: padding-box;
+    outline: 0;
+    width: 85%;
+
+    @include breakpoint(tablet) {
+      width: 50%;
+    }
+  }
+
+  &__header {
+    border-radius: 20px;
+    height: 50px;
+    background: $white;
+    width: 100%;
+  }
+
+  &__button--hide {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 500;
+    background: none;
+    border: none;
+    color: $black;
+
+    @include fonting(
+      $header-font-stack,
+      $s: 2rem,
+      $w: 400,
+      $tt: uppercase,
+      $ls: 1px
+    );
+
+    cursor: pointer;
+  }
+}

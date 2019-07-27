@@ -1,0 +1,67 @@
+.Navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  &__logo-link {
+    border-radius: 50%;
+    background: $background-color;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 2.5rem;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    transition: all 300ms;
+
+    &--scrolled {
+      background: $white;
+      box-shadow: $black-box-shadow;
+      padding: 1.5rem 3rem;
+
+      .Navbar {
+        &__list-link {
+          color: $black;
+
+          &:after {
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+
+  &__link-list {
+    display: none;
+
+    @include breakpoint(tablet) {
+      display: flex;
+    }
+  }
+
+  &__list-link {
+    cursor: pointer;
+    margin-left: 20px;
+    color: $black;
+    @include fonting(
+      $header-font-stack,
+      $s: 2rem,
+      $ls: 0.25rem,
+      $lh: normal,
+      $tt: uppercase
+    );
+  }
+}
