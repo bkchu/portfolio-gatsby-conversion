@@ -23,7 +23,7 @@ const NavbarMobile = props => {
         },
       },
       closed: {
-        left: window.innerWidth,
+        left: typeof window !== `undefined` && window.innerWidth,
         transition: {
           left: { stiffness: 1000 },
         },
