@@ -14,18 +14,6 @@ export default [
     img: ncr_project,
     technologies:
       'React,Redux,Sass,CSS Modules,React HTML Parser,classnames (javascript utility package)',
-    // credentials: [
-    //   {
-    //     role: 'Owner',
-    //     email: 'aa@aa.com',
-    //     password: '2mLSqs'
-    //   },
-    //   {
-    //     role: 'Resident',
-    //     email: 'aa@aa.com',
-    //     password: 'tailopez'
-    //   }
-    // ],
     color: '#A4B6A4'
   },
   {
