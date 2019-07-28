@@ -30,7 +30,7 @@ const Jumbo = () => {
           className="Jumbo__description"
         >
           <span className="Jumbo__name">Brandon Chung - </span>
-          UI Developer curating experiences that are pleasing and accessible.
+          UI Developer venturing to create pixel-perfect, accessible experiences.
         </motion.h1>
       </div>
     </Page>
