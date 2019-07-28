@@ -8,7 +8,7 @@ export default [
   {
     title: 'New Creation Realities',
     description:
-      'A front end project that acts as an online medium for an already existing supplemental book for church-use. This includes a bible verse parser that parses plain text biblical references and wraps them with external links to the YouVersion bible app.',
+      'A front end project that acts as an online medium for an already existing supplemental book for church-use. This includes a self-built bible reference parser that parses plain text biblical references and wraps them with external links to the YouVersion bible app.',
     year: '2018',
     url: 'https://confession.bkchu.dev',
     img: ncr_project,
