@@ -2,8 +2,32 @@ import anonqq_project from '../../assets/projects/anon-qq.svg';
 import instatube_project from '../../assets/projects/instatube.svg';
 import jrnlr_project from '../../assets/projects/jrnlr.svg';
 import mebu_project from '../../assets/projects/mebu.svg';
+import ncr_project from '../../assets/projects/new-creation-realities.svg';
 
 export default [
+  {
+    title: 'New Creation Realities',
+    description:
+      'A front end project that acts as an online medium for an already existing supplemental book for church-use. This includes a bible verse parser that parses plain text biblical references and wraps them with external links to the YouVersion bible app.',
+    year: '2018',
+    url: 'https://confession.bkchu.dev',
+    img: ncr_project,
+    technologies:
+      'React,Redux,Sass,CSS Modules,React HTML Parser,classnames (javascript utility package)',
+    // credentials: [
+    //   {
+    //     role: 'Owner',
+    //     email: 'aa@aa.com',
+    //     password: '2mLSqs'
+    //   },
+    //   {
+    //     role: 'Resident',
+    //     email: 'aa@aa.com',
+    //     password: 'tailopez'
+    //   }
+    // ],
+    color: '#A4B6A4'
+  },
   {
     title: 'MEBU Property Management | Team App',
     description:
