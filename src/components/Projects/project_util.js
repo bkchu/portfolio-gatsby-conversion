@@ -8,7 +8,7 @@ export default [
   {
     title: 'New Creation Realities',
     description:
-      'A front end project that acts as an online medium for an already existing supplemental book for church-use. This includes a self-built bible reference parser that parses plain text biblical references and wraps them with external links to the YouVersion bible app.',
+      'A front-end project that acts as an online medium for an already existing supplemental book for church-use. This includes a self-built bible reference parser that parses plain text biblical references and wraps them with external links to the YouVersion bible app.',
     year: '2018',
     url: 'https://ncr.bkchu.dev',
     img: ncr_project,
@@ -19,7 +19,7 @@ export default [
   {
     title: 'MEBU Property Management | Team App',
     description:
-      'An application for property owners to manage all aspects of their properties and residents.',
+      'A full-stack application created for real estate owners to manage all aspects of their property and residents. The front-end UI was envisioned, planned, and developed by a team under my leadership to be a simple, navigable dashboard.',
     year: '2018',
     url: 'https://mebu.herokuapp.com',
     img: mebu_project,
