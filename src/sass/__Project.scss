@@ -1,34 +1,44 @@
 .Project {
   color: $body-color;
   background: $white;
-  padding: 3rem;
   box-shadow: $black-box-shadow;
   position: relative;
 
   &__img-container {
-    position: absolute;
-    top: 0;
-    left: 0;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
     width: 100%;
-    height: 125px;
-    padding: 10px;
+    height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     cursor: pointer;
+
+    &:hover .Project__title {
+      opacity: 1;
+    }
   }
 
   &__img {
     width: 80%;
-    height: 80%;
+    min-height: 250px;
     object-fit: contain;
   }
 
   &__title {
-    @include fonting($header-font-stack, $s: 3.5rem, $lh: 4.5rem);
-    margin-top: 15rem;
-    margin-bottom: 1.5rem;
+    @include fonting($header-font-stack, $s: 2.5rem, $lh: 3rem, $ls: 1px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-top: auto;
     color: $black;
+    background: $white;
+    padding: 2rem;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
 
     cursor: pointer;
   }
@@ -39,7 +49,13 @@
   }
 
   &__link.link {
-    @include fonting($header-font-stack, $s: 2rem, $ls: 1px, $w: 300, $lh: 2.5rem);
+    @include fonting(
+      $header-font-stack,
+      $s: 2rem,
+      $ls: 1px,
+      $w: 300,
+      $lh: 2.5rem
+    );
     color: $black;
   }
 

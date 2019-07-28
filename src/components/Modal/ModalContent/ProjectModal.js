@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from "react"
+import Techs from "../../Projects/Techs/Techs"
 
-import ModalWrapper from '../ModalWrapper';
+import ModalWrapper from "../ModalWrapper"
 
 const ProjectModal = props => {
   const {
@@ -8,10 +9,11 @@ const ProjectModal = props => {
     description,
     img,
     credentials,
+    technologies,
     url,
     year,
-    color
-  } = props.currentModal.modalMeta;
+    color,
+  } = props.currentModal.modalMeta
 
   const displayCredentials = () => {
     return (
@@ -27,8 +29,8 @@ const ProjectModal = props => {
           ))}
         </div>
       )
-    );
-  };
+    )
+  }
 
   return (
     <ModalWrapper {...props} title={title} width={400} showOk={false}>
@@ -51,9 +53,10 @@ const ProjectModal = props => {
         </a>
         {displayCredentials()}
         <p className="ProjectModal__description">{description}</p>
+        <Techs techs={technologies} />
       </div>
     </ModalWrapper>
-  );
-};
+  )
+}
 
-export default ProjectModal;
+export default ProjectModal
