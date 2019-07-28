@@ -5,7 +5,8 @@ import classnames from "classnames"
 import { motion } from "framer-motion"
 import NavItem from "./NavItem/NavItem"
 import { navigate } from "gatsby"
-import { window } from 'browser-monads';
+import { window } from "browser-monads"
+import { Location } from "@reach/router"
 
 const NavbarMobile = props => {
   const [open, toggleOpen] = useState(false)
@@ -41,11 +42,6 @@ const NavbarMobile = props => {
     }
 
     const nav = [
-      {
-        to: "/",
-        name: "Home",
-        onClick: () => route("/"),
-      },
       {
         to: "/projects",
         name: "Projects",
@@ -83,14 +79,29 @@ const NavbarMobile = props => {
             className="NavbarMobile__links"
           >
             {nav.map(({ to, name, ...props }, i) => (
-              <NavItem
-                key={i}
-                to={to}
-                className="NavbarMobile__link link"
-                {...props}
-              >
-                {name}
-              </NavItem>
+              <Location>
+                {({ location }) => {
+                  console.log(props)
+                  console.log(to, name)
+                  const newClassNames = classnames(
+                    "NavbarMobile__link",
+                    "link",
+                    {
+                      active: location.pathname.includes(to.toLowerCase()),
+                    }
+                  )
+                  return (
+                    <NavItem
+                      key={i}
+                      to={to}
+                      className={newClassNames}
+                      {...props}
+                    >
+                      {name}
+                    </NavItem>
+                  )
+                }}
+              </Location>
             ))}
           </motion.div>
         )}

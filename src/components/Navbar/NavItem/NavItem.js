@@ -1,6 +1,8 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { Link } from "gatsby"
+import { Location } from "@reach/router"
+import classnames from "classnames"
 
 const NavItem = ({
   to,
@@ -57,9 +59,20 @@ const NavItem = ({
       {!!onClick ? (
         children
       ) : (
-        <Link className={className} to={to}>
-          {children}
-        </Link>
+        <Location>
+          {({ location }) => {
+            const newClassNames = classnames(className, {
+              active: location.pathname.includes(
+                String(children).toLowerCase()
+              ),
+            })
+            return (
+              <Link className={newClassNames} to={to}>
+                {children}
+              </Link>
+            )
+          }}
+        </Location>
       )}
     </motion.li>
   )

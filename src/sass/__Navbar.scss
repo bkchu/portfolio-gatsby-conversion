@@ -63,5 +63,9 @@
       $lh: normal,
       $tt: uppercase
     );
+
+    &.active {
+      font-weight: bold;
+    }
   }
 }

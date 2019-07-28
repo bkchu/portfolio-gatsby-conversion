@@ -37,9 +37,16 @@
 
   &__link {
     cursor: pointer;
-    padding: 3rem 0;
+    margin: 2rem 0;
+    padding: 1rem 0;
     color: $white;
     @include fonting($header-font-stack, $s: 2rem, $w: 300);
+
+    &.active {
+      font-weight: bold;
+      border-right: .5rem solid $white;
+      padding-right: 1rem;
+    }
   }
 
   .burger {
