@@ -10,7 +10,7 @@ export default [
     description:
       'A front end project that acts as an online medium for an already existing supplemental book for church-use. This includes a self-built bible reference parser that parses plain text biblical references and wraps them with external links to the YouVersion bible app.',
     year: '2018',
-    url: 'https://confession.bkchu.dev',
+    url: 'https://ncr.bkchu.dev',
     img: ncr_project,
     technologies:
       'React,Redux,Sass,CSS Modules,React HTML Parser,classnames (javascript utility package)',
