@@ -13,7 +13,7 @@ export default [
     url: 'https://ncr.bkchu.dev',
     img: ncr_project,
     technologies:
-      'React,Redux,Sass,CSS Modules,React HTML Parser,classnames (javascript utility package)',
+      'React,Redux,Sass,CSS Modules,React HTML Parser,classnames (javascript utility package), Mobile-Responsive',
     color: '#A4B6A4'
   },
   {
