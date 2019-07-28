@@ -19,17 +19,6 @@ const Project = props => {
         <img className="Project__img" src={img} alt={title} />
         <h1 className="Project__title">{title}</h1>
       </div>
-      {/* <p className="Project__year">{year}</p>
-      <a
-        className="Project__link link"
-        target="_blank"
-        rel="noopener noreferrer"
-        href={url}
-      >
-        {url}
-      </a>
-      <p className="Project__description">{description}</p>
-      <Techs techs={technologies} /> */}
     </div>
   )
 }

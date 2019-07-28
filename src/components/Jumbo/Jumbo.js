@@ -13,9 +13,7 @@ const Jumbo = () => {
       opacity: 1,
       transition: {
         type: 'spring',
-        // damping: 200,
         stiffness: 20,
-        // velocity: 0.01,
         delay: 1
       }
     }

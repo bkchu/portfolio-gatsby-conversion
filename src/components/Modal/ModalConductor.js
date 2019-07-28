@@ -10,8 +10,6 @@ const ModalConductor = props => {
       return <ProjectModal {...props} />;
     case 'CONTACT_MODAL':
       return <ContactModal {...props} />;
-    // case "HIDE_MODAL":
-    //   return <div />;
     default:
       return null;
   }

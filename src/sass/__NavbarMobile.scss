@@ -10,7 +10,6 @@
     width: 100vw;
     height: 100vh;
     z-index: 100;
-    // background: pink;
   }
 
   &__nav {
@@ -27,7 +26,6 @@
   }
 
   &__links {
-    // border: 2px solid red;
     height: 100%;
     margin: 4rem;
     margin-top: 10rem;
@@ -60,7 +58,6 @@
         &:first-child {
           transform: rotate(45deg);
           width: 2.528rem;
-          // width: 2.528rem;
         }
 
         &:nth-child(2) {
