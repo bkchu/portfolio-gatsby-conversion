@@ -16,6 +16,10 @@
     align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 3rem;
+
+    &--hidden {
+      display: none;
+    }
   }
 
   &__label {
@@ -83,5 +87,17 @@
         color: $black;
       }
     }
+  }
+
+  &__error-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__error {
+    @include fonting($header-font-stack, $s: 3rem, $lh: 4.5rem);
   }
 }
