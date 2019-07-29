@@ -56,7 +56,7 @@ class ContactModal extends Component {
             onSubmit={this.onSubmit}
             action="/thanks/"
             method="post"
-            netlify="true"
+            netlify
             netlify-honeypot="bot-field"
             className="Contact__form"
           >
