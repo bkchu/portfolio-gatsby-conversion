@@ -1,47 +1,47 @@
-import React, { Component, Fragment } from 'react';
-import Footer from '../Footer/Footer';
-import { motion } from 'framer-motion';
-import { window } from 'browser-monads';
+import React, { Component, Fragment } from "react"
+import Footer from "../Footer/Footer"
+import { motion } from "framer-motion"
+import { window } from "browser-monads"
 
 class Page extends Component {
   componentDidMount() {
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
+    document.body.scrollTop = document.documentElement.scrollTop = 0
   }
   render() {
-    const { children } = this.props;
+    const { children } = this.props
 
     const pageVariants = {
       hidden: {
         y: 20,
         opacity: 0,
         transition: {
-          y: { stiffness: 1000 }
-        }
+          y: { stiffness: 1000 },
+        },
       },
       visible: {
         y: 0,
         opacity: 1,
         transition: {
           delay: 0.75,
-          y: { type: 'spring', stiffness: 20 }
-        }
+          y: { type: "spring", stiffness: 20 },
+        },
       },
       exiting: {
         y: 50,
         opacity: 0,
         transition: {
           delay: 1,
-          y: { stiffness: 1000 }
-        }
-      }
-    };
+          y: { stiffness: 1000 },
+        },
+      },
+    }
 
     const loadingBarStates = {
       right: [100, 70, 0, 0, 0].map(
         val => `${val * 0.01 * window.innerWidth}px`
       ),
-      opacity: [0, 1, 1, 1, 0]
-    };
+      opacity: [0, 1, 1, 1, 0],
+    }
 
     return (
       <Fragment>
@@ -49,7 +49,7 @@ class Page extends Component {
           animate={loadingBarStates}
           transition={{
             duration: 1.05,
-            times: [0, 0.4, 0.5, 0.8, 1]
+            times: [0, 0.4, 0.5, 0.8, 1],
           }}
           className="Page__load-indicator"
         />
@@ -66,8 +66,8 @@ class Page extends Component {
           <Footer />
         </div>
       </Fragment>
-    );
+    )
   }
 }
 
-export default Page;
+export default Page

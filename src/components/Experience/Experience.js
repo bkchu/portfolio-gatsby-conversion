@@ -1,6 +1,7 @@
-import React from 'react';
-import Page from '../Page/Page';
-import experiences from './experience_util';
+import React from "react"
+import Page from "../Page/Page"
+import experiences from "./experience_util"
+
 const Experience = () => {
   const experienceDisplay = experiences.map(
     ({ experience, description, img, date, url, color }) => (
@@ -26,13 +27,13 @@ const Experience = () => {
         <p className="Experience__description">{description}</p>
       </div>
     )
-  );
+  )
 
   return (
     <Page title="Experience">
       <div className="Experiences">{experienceDisplay}</div>
     </Page>
-  );
-};
+  )
+}
 
-export default Experience;
+export default Experience
