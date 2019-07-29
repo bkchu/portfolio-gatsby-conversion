@@ -2,12 +2,12 @@ import React from "react"
 
 import SEO from "../components/seo"
 import Main from "../components/Main/Main"
-import ContactModal from "../components/Modal/ModalContent/ContactModal";
+import ContactForm from "../components/ContactForm/ContactForm";
 
 const Contact = () => (
   <Main>
     <SEO title="Contact" />
-    <ContactModal />
+    <ContactForm />
   </Main>
 )
 

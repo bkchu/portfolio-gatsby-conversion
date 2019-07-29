@@ -1,7 +1,7 @@
 import classnames from "classnames"
 import React, { Component } from "react"
 import { navigate } from "gatsby"
-import Page from "../../Page/Page"
+import Page from "../Page/Page"
 
 class ContactModal extends Component {
   state = {
