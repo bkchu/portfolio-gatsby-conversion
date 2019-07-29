@@ -62,14 +62,14 @@ class ContactModal extends Component {
             <form
               name="contact"
               onSubmit={this.onSubmit}
-              action="/"
+              action="/done/"
               method="post"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               className="Contact__form"
             >
               <input type="hidden" name="form-name" value="contact" />
-              <p hidden>
+              <p className="Contact__field--hidden" hidden>
                 <label>
                   Don’t fill this out:
                   <input name="bot-field" onChange={this.onChangeHandler} />
