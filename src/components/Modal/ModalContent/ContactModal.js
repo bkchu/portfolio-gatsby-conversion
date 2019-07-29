@@ -14,7 +14,6 @@ class ContactModal extends Component {
     replyto: "",
     content: "",
     error: false,
-    submissionError: false,
   }
 
   onSubmit = e => {
@@ -32,11 +31,11 @@ class ContactModal extends Component {
           "form-name": form.getAttribute("name"),
           name,
           replyto,
-          content
+          content,
         }),
       })
         .then(() => navigate(form.getAttribute("action")))
-        .catch(() => this.setState({ submissionError: true }))
+        .catch(() => navigate("/error"))
     }
   }
 
@@ -45,79 +44,70 @@ class ContactModal extends Component {
   }
 
   render() {
-    const { error, submissionError } = this.state
+    const { error } = this.state
     const contactClassNames = classnames("Contact", {
       "Contact--error": error,
     })
     return (
       <ModalWrapper {...this.props} width={1000} showOk={false}>
         <div className={contactClassNames}>
-          {submissionError ? (
-            <div className="Contact__error-container">
-              <h2 className="Contact__error">
-                Oops, an error appeared while submitting, sorry. Please reach
-                out to my email!
-              </h2>
-            </div>
-          ) : (
-            <form
-              name="contact"
-              onSubmit={this.onSubmit}
-              action="/thanks/"
-              method="post"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              className="Contact__form"
-            >
-              <input type="hidden" name="form-name" value="contact" />
-              <p className="Contact__field--hidden" hidden>
-                <label>
-                  Don’t fill this out:
-                  <input name="bot-field" onChange={this.onChangeHandler} />
-                </label>
-              </p>
-              <label className="Contact__field" htmlFor="name">
-                <span className="Contact__label">Name</span>
-                <input
-                  onChange={this.onChangeHandler}
-                  className="Contact__input"
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="ex. John Doe"
-                />
+          <form
+            name="contact"
+            onSubmit={this.onSubmit}
+            action="/thanks/"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            className="Contact__form"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <p className="Contact__field--hidden" hidden>
+              <label>
+                Don’t fill this out:
+                <input name="bot-field" onChange={this.onChangeHandler} />
               </label>
+            </p>
+            <label className="Contact__field" htmlFor="name">
+              <span className="Contact__label">Name</span>
+              <input
+                onChange={this.onChangeHandler}
+                className="Contact__input"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="ex. John Doe"
+              />
+            </label>
 
-              <label className="Contact__field" htmlFor="email">
-                <span className="Contact__label">Email</span>
-                <input
-                  onChange={this.onChangeHandler}
-                  className="Contact__input"
-                  type="email"
-                  id="email"
-                  name="replyto"
-                  placeholder="ex. john.doe@site.com"
-                />
-              </label>
-              <label className="Contact__field" htmlFor="content">
-                <span className="Contact__label">Content</span>
-                <textarea
-                  onChange={this.onChangeHandler}
-                  className="Contact__input Contact__input--textarea"
-                  type="text"
-                  id="content"
-                  name="content"
-                  placeholder="ex. Brandon, let's grab coffee..."
-                />
-              </label>
-              <button
-                className="Contact__input Contact__input--submit"
-                type="submit"
-              >
-                Send
-              </button>
-            </form>
-          )}
+            <label className="Contact__field" htmlFor="email">
+              <span className="Contact__label">Email</span>
+              <input
+                onChange={this.onChangeHandler}
+                className="Contact__input"
+                type="email"
+                id="email"
+                name="replyto"
+                placeholder="ex. john.doe@site.com"
+              />
+            </label>
+            <label className="Contact__field" htmlFor="content">
+              <span className="Contact__label">Content</span>
+              <textarea
+                onChange={this.onChangeHandler}
+                className="Contact__input Contact__input--textarea"
+                type="text"
+                id="content"
+                name="content"
+                placeholder="ex. Brandon, let's grab coffee..."
+              />
+            </label>
+            <button
+              className="Contact__input Contact__input--submit"
+              type="submit"
+            >
+              Send
+            </button>
+          </form>
         </div>
       </ModalWrapper>
     )
