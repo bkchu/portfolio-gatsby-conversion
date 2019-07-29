@@ -3,11 +3,6 @@ import React, { Component } from "react"
 import ModalWrapper from "../ModalWrapper"
 import { navigate } from "gatsby"
 
-function encode(data) {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&")
-}
 class ContactModal extends Component {
   state = {
     name: "",
@@ -27,7 +22,7 @@ class ContactModal extends Component {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
+        body: this.encode({
           "form-name": form.getAttribute("name"),
           name,
           replyto,
@@ -37,6 +32,12 @@ class ContactModal extends Component {
         .then(() => navigate(form.getAttribute("action")))
         .catch(() => navigate("/error"))
     }
+  }
+
+  encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
   }
 
   onChangeHandler = e => {
@@ -56,8 +57,8 @@ class ContactModal extends Component {
             onSubmit={this.onSubmit}
             action="/thanks/"
             method="post"
-            netlify
-            netlify-honeypot="bot-field"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
             className="Contact__form"
           >
             <input type="hidden" name="form-name" value="contact" />
