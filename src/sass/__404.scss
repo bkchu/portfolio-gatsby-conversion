@@ -19,6 +19,7 @@
   &__subheader {
     @include fonting($header-font-stack, $s: 3rem, $w: 700, $lh: 4rem);
     color: $black;
+    width: 70%;
     text-align: center;
     margin-bottom: 2rem;
   }

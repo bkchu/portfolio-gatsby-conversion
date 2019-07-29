@@ -32,6 +32,7 @@ class ContactModal extends Component {
           "form-name": form.getAttribute("name"),
           name,
           replyto,
+          content
         }),
       })
         .then(() => navigate(form.getAttribute("action")))
@@ -62,7 +63,7 @@ class ContactModal extends Component {
             <form
               name="contact"
               onSubmit={this.onSubmit}
-              action="/done/"
+              action="/thanks/"
               method="post"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
