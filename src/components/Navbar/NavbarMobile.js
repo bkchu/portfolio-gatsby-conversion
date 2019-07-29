@@ -58,9 +58,9 @@ const NavbarMobile = props => {
         onClick: () => route("/experience"),
       },
       {
-        to: "#",
+        to: "/contact",
         name: "Contact",
-        onClick: () => props.contactModal(),
+        onClick: () => route("/contact"),
       },
     ]
 
@@ -79,10 +79,8 @@ const NavbarMobile = props => {
             className="NavbarMobile__links"
           >
             {nav.map(({ to, name, ...props }, i) => (
-              <Location>
+              <Location key={i}>
                 {({ location }) => {
-                  console.log(props)
-                  console.log(to, name)
                   const newClassNames = classnames(
                     "NavbarMobile__link",
                     "link",

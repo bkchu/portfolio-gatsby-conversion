@@ -4,11 +4,11 @@ import SEO from "../components/seo"
 import Main from "../components/Main/Main"
 import Projects from "../components/Projects/Projects"
 
-const IndexPage = () => (
+const ProjectsPage = () => (
   <Main>
     <SEO title="Projects" />
     <Projects />
   </Main>
 )
 
-export default IndexPage
+export default ProjectsPage

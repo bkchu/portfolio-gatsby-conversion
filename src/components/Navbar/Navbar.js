@@ -74,9 +74,9 @@ class Navbar extends Component {
         onClick: null,
       },
       {
-        to: "#",
+        to: "/contact",
         name: "Contact",
-        onClick: () => this.props.contactModal(),
+        onClick: null,
       },
     ]
 

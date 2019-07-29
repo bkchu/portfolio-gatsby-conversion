@@ -1,7 +1,7 @@
 import classnames from "classnames"
 import React, { Component } from "react"
-import ModalWrapper from "../ModalWrapper"
 import { navigate } from "gatsby"
+import Page from "../../Page/Page"
 
 class ContactModal extends Component {
   state = {
@@ -50,7 +50,7 @@ class ContactModal extends Component {
       "Contact--error": error,
     })
     return (
-      <ModalWrapper {...this.props} width={1000} showOk={false}>
+      <Page>
         <div className={contactClassNames}>
           <form
             name="contact"
@@ -110,7 +110,7 @@ class ContactModal extends Component {
             </button>
           </form>
         </div>
-      </ModalWrapper>
+      </Page>
     )
   }
 }

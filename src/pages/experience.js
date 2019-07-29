@@ -4,11 +4,11 @@ import SEO from "../components/seo"
 import Main from "../components/Main/Main"
 import Experience from "../components/Experience/Experience"
 
-const IndexPage = () => (
+const ExperiencePage = () => (
   <Main>
     <SEO title="Experience" />
     <Experience />
   </Main>
 )
 
-export default IndexPage
+export default ExperiencePage

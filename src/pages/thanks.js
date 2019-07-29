@@ -2,7 +2,7 @@ import React from "react"
 import SEO from "../components/seo"
 import { Link } from 'gatsby';
 
-const NotFoundPage = () => (
+const Thanks = () => (
   <div className="FourOhFour">
     <SEO title="Thanks" />
     <h1 className="FourOhFour__header">Thanks!</h1>
@@ -11,4 +11,4 @@ const NotFoundPage = () => (
   </div>
 )
 
-export default NotFoundPage
+export default Thanks
