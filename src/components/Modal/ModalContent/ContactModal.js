@@ -11,30 +11,32 @@ function encode(data) {
 class ContactModal extends Component {
   state = {
     name: "",
-    _replyto: "",
+    replyto: "",
     content: "",
     error: false,
     submissionError: false,
   }
 
   onSubmit = e => {
-    const { name, _replyto, content } = this.state
-    if (!name || !_replyto || !content) {
+    const form = e.target
+    const { name, replyto, content } = this.state
+    e.preventDefault()
+
+    if (!name || !replyto || !content) {
       this.setState({ error: true })
     } else {
-      const form = e.target
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
           "form-name": form.getAttribute("name"),
-          ...this.state,
+          name,
+          replyto,
         }),
       })
         .then(() => navigate(form.getAttribute("action")))
         .catch(() => this.setState({ submissionError: true }))
     }
-    e.preventDefault()
   }
 
   onChangeHandler = e => {
@@ -61,13 +63,13 @@ class ContactModal extends Component {
               name="contact"
               onSubmit={this.onSubmit}
               action="/"
-              method="POST"
-              data-netlify-honeypot="bot-field"
+              method="post"
               data-netlify="true"
+              data-netlify-honeypot="bot-field"
               className="Contact__form"
             >
               <input type="hidden" name="form-name" value="contact" />
-              <p hidden className="Contact__form--hidden">
+              <p hidden>
                 <label>
                   Don’t fill this out:
                   <input name="bot-field" onChange={this.onChangeHandler} />
@@ -92,7 +94,7 @@ class ContactModal extends Component {
                   className="Contact__input"
                   type="email"
                   id="email"
-                  name="_replyto"
+                  name="replyto"
                   placeholder="ex. john.doe@site.com"
                 />
               </label>
