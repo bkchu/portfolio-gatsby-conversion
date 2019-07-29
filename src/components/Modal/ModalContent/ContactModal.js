@@ -56,8 +56,8 @@ class ContactModal extends Component {
             onSubmit={this.onSubmit}
             action="/thanks/"
             method="post"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
+            netlify="true"
+            netlify-honeypot="bot-field"
             className="Contact__form"
           >
             <input type="hidden" name="form-name" value="contact" />
