@@ -19,7 +19,6 @@ class ContactModal extends Component {
 
   onSubmit = e => {
     const { name, _replyto, content } = this.state
-    e.preventDefault()
     if (!name || !_replyto || !content) {
       this.setState({ error: true })
     } else {
@@ -35,6 +34,7 @@ class ContactModal extends Component {
         .then(() => navigate(form.getAttribute("action")))
         .catch(() => this.setState({ submissionError: true }))
     }
+    e.preventDefault()
   }
 
   onChangeHandler = e => {
@@ -52,7 +52,8 @@ class ContactModal extends Component {
           {submissionError ? (
             <div className="Contact__error-container">
               <h2 className="Contact__error">
-                Oops, an error appeared while submitting, sorry. Please reach out to my email!
+                Oops, an error appeared while submitting, sorry. Please reach
+                out to my email!
               </h2>
             </div>
           ) : (
@@ -66,6 +67,12 @@ class ContactModal extends Component {
               className="Contact__form"
             >
               <input type="hidden" name="form-name" value="contact" />
+              <p hidden className="Contact__form--hidden">
+                <label>
+                  Don’t fill this out:
+                  <input name="bot-field" onChange={this.onChangeHandler} />
+                </label>
+              </p>
               <label className="Contact__field" htmlFor="name">
                 <span className="Contact__label">Name</span>
                 <input
