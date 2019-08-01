@@ -3,8 +3,18 @@ import instatube_project from "../../assets/projects/instatube.svg"
 import jrnlr_project from "../../assets/projects/jrnlr.svg"
 import mebu_project from "../../assets/projects/mebu.svg"
 import ncr_project from "../../assets/projects/new-creation-realities.svg"
-
+import bkchu_logo from "../../assets/bkchuLogo.svg"
 export default [
+  {
+    title: "Personal Portfolio",
+    description: `The goal for this portfolio site was to make it blazing fast and easy to interact with, so I decided to use Gatsby ❤️, a "blazing fast" static site generator. I also wanted to incorporate animations, so I incorporated the recently released Framer Motion to mimic fast performance. For my final goal, I wanted the site to be SEO-friendly.`,
+    year: "2019",
+    url: "https://www.bkchu.dev",
+    img: bkchu_logo,
+    technologies:
+      "Gatsby,Redux,Framer Motion,classnames (javascript utility package),PWA,Mobile-Responsive",
+    color: "#000",
+  },
   {
     title: "New Creation Realities",
     description:
@@ -13,7 +23,7 @@ export default [
     url: "https://ncr.bkchu.dev",
     img: ncr_project,
     technologies:
-      "React,Redux,Sass,CSS Modules,React HTML Parser,classnames (javascript utility package), Mobile-Responsive",
+      "React,Redux,Sass,CSS Modules,React HTML Parser,classnames (javascript utility package), PWA, Mobile-Responsive",
     color: "#A4B6A4",
   },
   {

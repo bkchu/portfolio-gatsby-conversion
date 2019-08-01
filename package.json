@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "brandon-chung-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A personal portfolio containing a collection of Brandon Chung's works.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Brandon Chung <brandon@bkchu.dev>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.20",
     "@fortawesome/free-brands-svg-icons": "^5.10.0",
