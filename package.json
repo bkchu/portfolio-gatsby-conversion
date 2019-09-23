@@ -6,7 +6,7 @@
   "author": "Brandon Chung <brandon@bkchu.dev>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.21",
-    "@fortawesome/free-brands-svg-icons": "^5.10.1",
+    "@fortawesome/free-brands-svg-icons": "^5.11.1",
     "@fortawesome/free-solid-svg-icons": "^5.10.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "browser-monads": "^1.0.0",
