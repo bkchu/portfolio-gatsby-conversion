@@ -4,9 +4,7 @@
   grid-gap: 20px;
 }
 
-
 .Experience {
-  color: $body-color;
   background: $white;
   padding: 3rem;
   box-shadow: $black-box-shadow;
@@ -31,7 +29,8 @@
   }
 
   &__title {
-    @include fonting($header-font-stack, $s: 3.5rem, $lh: 4.5rem);
+    @include fonting($header-font-stack, $w: 500, $s: 3.5rem, $lh: 1.3);
+
     margin-top: 15rem;
     margin-bottom: 1.5rem;
     color: $black;
@@ -39,16 +38,24 @@
 
   &__year {
     @include fonting($header-font-stack, $s: 2rem);
+
     margin: 1.5rem 0;
   }
 
   &__link.link {
-    @include fonting($header-font-stack, $s: 2rem, $ls: 1px, $w: 300, $lh: 2.5rem);
+    @include fonting(
+      $header-font-stack,
+      $s: 2rem,
+      $w: 300,
+      $lh: 2.5rem
+    );
+
     color: $black;
   }
 
   &__description {
     @include fonting($header-font-stack, $s: 2rem, $w: 300, $lh: 2.5rem);
+
     padding-left: 1.5rem;
     border-left: 0.25rem solid $gray-1;
     color: $black;

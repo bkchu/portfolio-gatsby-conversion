@@ -1,5 +1,5 @@
 .Jumbo {
-  margin-top: 20vh;
+  margin-top: 10vh;
   left: 1rem;
   display: flex;
   align-items: center;
@@ -8,10 +8,22 @@
 
   &__name,
   &__description {
-    @include fonting($header-font-stack, $s: 5rem, $w: 700, $lh: 6rem);
+    @include fonting(
+      $header-font-stack,
+      $s: 5rem,
+      $w: 600,
+      $lh: 1.1,
+      $ls: -0.022em
+    );
 
     @include breakpoint(tablet) {
-      @include fonting($header-font-stack, $s: 9rem, $w: 700, $lh: 11rem);
+      @include fonting(
+        $header-font-stack,
+        $s: 8rem,
+        $w: 600,
+        $lh: 1.2,
+        $ls: -0.022em
+      );
     }
 
     max-width: 85%;

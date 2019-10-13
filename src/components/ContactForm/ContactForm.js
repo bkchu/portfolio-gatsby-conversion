@@ -52,6 +52,9 @@ class ContactModal extends Component {
     return (
       <Page>
         <div className={contactClassNames}>
+          <h1 className="Contact__description">
+            I like conversation with my coffee.
+          </h1>
           <form
             name="contact"
             onSubmit={this.onSubmit}

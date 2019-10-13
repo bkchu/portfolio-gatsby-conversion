@@ -1,5 +1,4 @@
 .ProjectModal {
-  color: $body-color;
   background: $white;
   padding: 20px;
   position: relative;
@@ -24,24 +23,28 @@
   }
 
   &__title {
+    @include fonting($header-font-stack, $s: 3rem, $w: 500);
+
     margin-top: 15rem;
     margin-bottom: 1.5rem;
     color: $black;
-    @include fonting($header-font-stack, $s: 3rem);
   }
 
   &__year {
     @include fonting($header-font-stack, $s: 2rem);
+
     margin: 1.5rem 0;
   }
 
   &__link.link {
+    @include fonting($header-font-stack, $s: 2rem, $w: 300);
+
     color: $black;
-    @include fonting($header-font-stack, $s: 2rem, $ls: 1px, $w: 300);
   }
 
   &__description {
-    @include fonting($header-font-stack, $s: 2rem, $w: 300, $lh: 2.5rem);
+    @include fonting($header-font-stack, $s: 2rem, $w: 300);
+
     padding-left: 1.5rem;
     border-left: 0.25rem solid $gray-1;
     color: $black;

@@ -24,6 +24,7 @@
 
   &__title {
     @include fonting($header-font-stack, $s: 2.5rem, $lh: 3rem, $ls: 1px);
+
     position: absolute;
     bottom: 0;
     left: 0;
@@ -41,6 +42,7 @@
 
   &__year {
     @include fonting($header-font-stack, $s: 2rem);
+
     margin: 1.5rem 0;
   }
 
@@ -52,11 +54,13 @@
       $w: 300,
       $lh: 2.5rem
     );
+
     color: $black;
   }
 
   &__description {
     @include fonting($header-font-stack, $s: 2rem, $w: 300, $lh: 2.5rem);
+
     padding-left: 1.5rem;
     border-left: 0.25rem solid $gray-1;
     color: $black;

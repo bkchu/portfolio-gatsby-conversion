@@ -37,7 +37,6 @@
 
     p {
       @include fonting($header-font-stack, $s: 2rem);
-      letter-spacing: 1px;
       margin: 5px 0;
       margin-right: 20px;
 

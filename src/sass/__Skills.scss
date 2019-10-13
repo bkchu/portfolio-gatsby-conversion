@@ -1,22 +1,18 @@
 .Skills {
-  &__header {
-    @include fonting($s: 3rem, $ls: 2px);
-
-    color: $black;
-  }
-
   margin-top: 4rem;
   display: grid;
   grid: auto-flow / repeat(auto-fill, minmax(15rem, 1fr));
   grid-gap: 3rem;
 }
+
 .Skill {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   &__title {
-    @include fonting($header-font-stack, $w: 300, $s: 3rem);
+    @include fonting($header-font-stack, $w: 300, $s: 2rem);
+
     color: $black;
     margin-bottom: 10px;
   }
