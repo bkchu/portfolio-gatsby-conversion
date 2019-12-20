@@ -1,7 +1,7 @@
-import React, { Component, useEffect } from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTimes } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { motion } from "framer-motion"
+import React, { useEffect } from "react"
 
 function ModalWrapper(props) {
   useEffect(() => {
