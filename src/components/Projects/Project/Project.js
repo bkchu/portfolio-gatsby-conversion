@@ -25,14 +25,14 @@ const Project = props => {
 
   return (
     <motion.div variants={projectVariants} key={title} className="Project">
-      <div
+      <button
         onClick={() => props.projectModal(props.project)}
         style={{ background: color }}
         className="Project__img-container"
       >
         <img className="Project__img" src={img} alt={title} />
         <h1 className="Project__title">{title}</h1>
-      </div>
+      </button>
     </motion.div>
   )
 }

@@ -53,7 +53,7 @@ class ContactModal extends Component {
       <Page>
         <div className={contactClassNames}>
           <h1 className="Contact__description">
-            I like my conversation with coffee.
+            I like my conversation with coffee. <span role="img" aria-label="coffee emoji">☕</span>
           </h1>
           <form
             name="contact"
