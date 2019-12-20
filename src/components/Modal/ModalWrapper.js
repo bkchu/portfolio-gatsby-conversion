@@ -1,83 +1,76 @@
-import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import { motion } from 'framer-motion';
+import { faTimes } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { motion } from "framer-motion"
+import React, { useEffect } from "react"
 
-class ModalWrapper extends Component {
-  componentDidMount() {
-    document.body.style.overflow = 'hidden';
+function ModalWrapper(props) {
+  useEffect(() => {
+    document.body.style.overflow = "hidden"
+
+    return () => (document.body.style.overflow = "auto")
+  })
+
+  const handleBackgroundClick = e => {
+    if (e.target === e.currentTarget) props.hideModal()
   }
 
-  componentWillUnmount() {
-    document.body.style.overflow = 'auto';
+  const onOk = () => {
+    props.onOk()
+    props.hideModal()
   }
 
-  render() {
-    const handleBackgroundClick = e => {
-      if (e.target === e.currentTarget) this.props.hideModal();
-    };
+  const okButton = props.showOk ? (
+    <button
+      className="Modal__button--ok"
+      onClick={onOk}
+      disabled={props.okDisabled}
+    >
+      {props.okText}
+    </button>
+  ) : null
 
-    const onOk = () => {
-      this.props.onOk();
-      this.props.hideModal();
-    };
-
-    const okButton = this.props.showOk ? (
-      <button
-        className="Modal__button--ok"
-        onClick={onOk}
-        disabled={this.props.okDisabled}
-      >
-        {this.props.okText}
-      </button>
-    ) : null;
-
-    const modalVariants = {
-      open: {
-        y: 0,
-        opacity: 1,
-        transition: {
-          y: { type: 'spring', stiffness: 50 }
-        }
+  const modalVariants = {
+    open: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        y: { type: "spring", stiffness: 50 },
       },
-      closed: {
-        y: 50,
-        opacity: 0
-      }
-    };
-
-    return (
-      <div className="Modal" onClick={handleBackgroundClick}>
-        <motion.div
-          initial="closed"
-          animate="open"
-          variants={modalVariants}
-          className="Modal__content"
-        >
-          <header className="Modal__header">
-            <button
-              className="Modal__button--hide"
-              onClick={this.props.hideModal}
-            >
-              <FontAwesomeIcon icon={faTimes} size="1x" />
-            </button>
-          </header>
-          <div>{this.props.children}</div>
-
-          {okButton}
-        </motion.div>
-      </div>
-    );
+    },
+    closed: {
+      y: 50,
+      opacity: 0,
+    },
   }
+
+  return (
+    <div className="Modal" onClick={handleBackgroundClick}>
+      <motion.div
+        initial="closed"
+        animate="open"
+        variants={modalVariants}
+        className="Modal__content"
+      >
+        <header className="Modal__header">
+          <button className="Modal__button--hide" onClick={props.hideModal}>
+            <FontAwesomeIcon icon={faTimes} size="1x" />
+          </button>
+        </header>
+        <div>{props.children}</div>
+
+        {okButton}
+      </motion.div>
+    </div>
+  )
 }
 
 ModalWrapper.defaultProps = {
-  title: '',
+  title: "",
   showOk: true,
-  okText: 'OK',
+  okText: "OK",
   okDisabled: false,
   width: 400,
-  onOk: () => {}
-};
+  onOk: () => {},
+}
 
-export default ModalWrapper;
+export default ModalWrapper
