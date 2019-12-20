@@ -1,12 +1,12 @@
+import { Location } from "@reach/router"
+import { window } from "browser-monads"
+import classnames from "classnames"
+import { motion } from "framer-motion"
+import { navigate } from "gatsby"
 import React, { useState } from "react"
 import { connect } from "react-redux"
 import { contactModal } from "../../redux/ducks/reducer"
-import classnames from "classnames"
-import { motion } from "framer-motion"
 import NavItem from "./NavItem/NavItem"
-import { navigate } from "gatsby"
-import { window } from "browser-monads"
-import { Location } from "@reach/router"
 
 const NavbarMobile = props => {
   const [open, toggleOpen] = useState(false)
@@ -115,16 +115,16 @@ const NavbarMobile = props => {
   return (
     <div className="NavbarMobile">
       {open && (
-        <div
+        <button
           onClick={() => toggleOpen(false)}
           className="NavbarMobile__modal"
         />
       )}
-      <div onClick={() => toggleOpen(!open)} className={burgerClasses}>
+      <button onClick={() => toggleOpen(!open)} className={burgerClasses}>
         <span />
         <span />
         <span />
-      </div>
+      </button>
       {menu(open)}
     </div>
   )
@@ -136,7 +136,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  { contactModal }
-)(NavbarMobile)
+export default connect(mapStateToProps, { contactModal })(NavbarMobile)
