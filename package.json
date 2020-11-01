@@ -16,7 +16,7 @@
     "framer-motion": "^1.6.7",
     "gatsby": "^2.15.21",
     "gatsby-cli": "^2.8.21",
-    "gatsby-image": "^2.2.37",
+    "gatsby-image": "^2.4.21",
     "gatsby-plugin-google-analytics": "^2.1.31",
     "gatsby-plugin-manifest": "^2.2.34",
     "gatsby-plugin-mdx": "^1.0.64",
